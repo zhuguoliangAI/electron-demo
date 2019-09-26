@@ -1,0 +1,35 @@
+{
+  "name": "electron-demo",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "build": {
+    "appId": "com.xxx.app",
+    "mac": {
+      "target": ["dmg","zip"]
+    },
+    "win": {
+      "target": ["nsis","zip"]
+    }
+  },
+  "scripts": {
+    "start": "electron .",
+    "debug": "electron --inspect .",
+    "package": "electron-packager . HelloWorld --platform=win32 --arch=x64  --out=./out  --app-version=0.0.1 --overwrite --ignore=node_modules",
+    "dist": "electron-builder --win --x64"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "zgl0.0",
+  "devDependencies": {
+    "electron": "^6.0.10",
+    "electron-packager": "^14.0.6",
+    "electron-builder": "^21.2.0"
+  }
+}
